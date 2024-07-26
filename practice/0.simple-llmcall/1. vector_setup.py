@@ -1,15 +1,15 @@
 # 1. pip install pypdf2 langchain-community
-from langchain.schema.document import Document
-from langchain_community.embeddings import OllamaEmbeddings
-from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain_community.vectorstores import Chroma
 from langchain_community.document_loaders import WebBaseLoader
 from PyPDF2 import PdfReader
+from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain.schema.document import Document
+from langchain_community.embeddings import OllamaEmbeddings
+from langchain_community.vectorstores import Chroma
 
 import gradio as gr
 
 # 2. Parse PDF
-reader = PdfReader('arso.pdf')
+reader = PdfReader('./arso.pdf')
 text = ""
 for i in range(0, len(reader.pages)):
     page = reader.pages[i]

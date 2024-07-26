@@ -57,17 +57,6 @@ function addMessage(role, content) {
     messageElement.className = `message ${role}`;
     messageElement.textContent = content;
 
-    console.log(role);
-    if (role === 'bot') {
-        const feedbackDiv = document.createElement('div');
-        
-        feedbackDiv.classList.add('feedback');
-        feedbackDiv.innerHTML = '👍 👎';
-        feedbackDiv.querySelector('👍').addEventListener('click', () => sendFeedback('up'));
-        feedbackDiv.querySelector('👎').addEventListener('click', () => sendFeedback('down'));
-        messageDiv.appendChild(feedbackDiv);
-    }
-
     messagesContainer.appendChild(messageElement);
     messagesContainer.scrollTop = messagesContainer.scrollHeight;
 }
