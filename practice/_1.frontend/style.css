@@ -237,6 +237,11 @@ body {
     align-self: flex-start;
 }
 
+.feedback {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
 #chat-input {
     display: flex;
     border-top: 1px solid #ccc;

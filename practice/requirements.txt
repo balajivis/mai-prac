@@ -1,6 +1,7 @@
 langserve==0.2.2
 pydantic==1.10.13
 langchain==0.2.10
+langchain-groq==0.1.6
 langchain-community==0.2.9
 sse-starlette==2.1.2
 fastapi==0.111.1
@@ -10,3 +11,5 @@ Faker==26.0.0
 gradio==3.48.0
 pypdf2==3.0.1
 bs4==0.0.2
+torch==2.4.0
+transformers==4.43

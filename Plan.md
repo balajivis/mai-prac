@@ -26,7 +26,9 @@
 ## Saturday
 
 6. **Smarter Memory**
-*Include KG*
+Sciphi/Triplex
+R2R
+Neo4j
 
 7. **SQL + Vector DB**
    - Text to SQL (predictable)
