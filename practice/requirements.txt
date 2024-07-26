@@ -13,3 +13,4 @@ pypdf2==3.0.1
 bs4==0.0.2
 torch==2.4.0
 transformers==4.43
+python-dotenv==1.0.1
