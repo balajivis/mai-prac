@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Chat</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #chat-widget {
+            display: none;
+            flex-direction: column;
+            width: 300px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background-color: #fff;
+        }
+        #chat-messages {
+            flex-grow: 1;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .message {
+            margin-bottom: 10px;
+        }
+        .user {
+            text-align: right;
+        }
+        .bot {
+            text-align: left;
+        }
+        #message-input {
+            width: calc(100% - 60px);
+        }
+        #send-button {
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <button id="chat-button">Chat</button>
+    <div id="chat-widget">
+        <div id="chat-messages"></div>
+        <input type="text" id="message-input" placeholder="Type a message...">
+        <button id="send-button">Send</button>
+    </div>
+
+    <script>
+        // Toggle chat widget visibility
+        document.getElementById('chat-button').addEventListener('click', function() {
+            const chatWidget = document.getElementById('chat-widget');
+            if (chatWidget.style.display === 'none' || chatWidget.style.display === '') {
+                chatWidget.style.display = 'flex';
+            } else {
+                chatWidget.style.display = 'none';
+            }
+        });
+
+        // Handle sending messages
+        document.getElementById('send-button').addEventListener('click', function() {
+            sendMessage();
+        });
+
+        document.getElementById('message-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+
+        function sendMessage() {
+            const input = document.getElementById('message-input');
+            const message = input.value.trim();
+            if (message) {
+                addMessage('user', message);
+                input.value = '';
+                
+                fetch('http://localhost:8000/customer-service/invoke', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'accept': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        input: message,
+                        config: {},
+                        kwargs: {}
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    const botMessage = data.output || 'Sorry, I did not understand that.';
+                    addMessage('bot', botMessage);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    addMessage('bot', 'Sorry, there was an error processing your request.');
+                });
+            }
+        }
+
+        function addMessage(role, content) {
+            const messagesContainer = document.getElementById('chat-messages');
+            const messageElement = document.createElement('div');
+            messageElement.className = `message ${role}`;
+            messageElement.textContent = content;
+            messagesContainer.appendChild(messageElement);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+    </script>
+</body>
+</html>

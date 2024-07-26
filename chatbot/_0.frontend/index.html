@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Simple Chat</title>
+</head>
+<body>
+    <div id="chat-widget">
+        <div id="chat-messages"></div>
+        <input type="text" id="message-input" placeholder="Type a message...">
+        <button id="send-button">Send</button>
+    </div>
+
+    <script>
+        // Handle sending messages
+        document.getElementById('send-button').addEventListener('click', sendMessage);
+        document.getElementById('message-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+
+        function sendMessage() {
+            const input = document.getElementById('message-input');
+            const message = input.value.trim();
+            if (message) {
+                addMessage('user', message);
+                input.value = '';
+
+                fetch('http://localhost:8000/customer-service/invoke', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify({ input: message, config: {}, kwargs: {} })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    const botMessage = data.output || 'Sorry, I did not understand that.';
+                    addMessage('bot', botMessage);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    addMessage('bot', 'Sorry, there was an error processing your request.');
+                });
+            }
+        }
+
+        function addMessage(role, content) {
+            const messagesContainer = document.getElementById('chat-messages');
+            const messageElement = document.createElement('div');
+            messageElement.className = `message ${role}`;
+            messageElement.textContent = content;
+            messagesContainer.appendChild(messageElement);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+{
+    "default_user": [
+        {
+            "role": "user",
+            "content": "hi"
+        },
+        {
+            "role": "assistant",
+            "content": "Hello! How can I assist you today?"
+        },
+        {
+            "role": "user",
+            "content": "what slots you have for tomorrow"
+        },
+        {
+            "role": "assistant",
+            "content": "To help you better, could you specify which type of session you're interested in? For example, lab sessions, office hour appointments, submitting a complaint, or cancelling an appointment."
+        },
+        {
+            "role": "user",
+            "content": "office hour appointment for tomorrow"
+        },
+        {
+            "role": "assistant",
+            "content": "Sure, I can help you with that. Which type of session are you looking for?"
+        },
+        {
+            "role": "user",
+            "content": "office hour"
+        },
+        {
+            "role": "assistant",
+            "content": "Great news! For tomorrow, there are available office hour appointment slots at 09:00, 11:00, and 14:00. Which one would you like to book?"
+        },
+        {
+            "role": "user",
+            "content": "I want to book 11:00"
+        },
+        {
+            "role": "assistant",
+            "content": "To book the 11:00 slot, I'll need your name and phone number. Could you provide those, please?"
+        },
+        {
+            "role": "user",
+            "content": "Balaji Viswanathan, 123-456-7890"
+        },
+        {
+            "role": "assistant",
+            "content": "Your office hour appointment has been successfully booked for tomorrow at 11:00. Is there anything else I can help you with?"
+        },
+        {
+            "role": "user",
+            "content": "Great. I want to submit a complaint. The classes are bit hard."
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for choosing Modern AI Pro! If you have any more questions or need further assistance, feel free to ask."
+        },
+        {
+            "role": "user",
+            "content": "CAn I submit the issie?"
+        },
+        {
+            "role": "assistant",
+            "content": "It looks like the 11:00 slot is already booked for tomorrow. However, there are still available slots at 09:00 and 14:00. Would you like to book one of these instead?"
+        },
+        {
+            "role": "user",
+            "content": "I want to submit a complaint"
+        },
+        {
+            "role": "assistant",
+            "content": "Of course, I can help you submit a complaint. Could you please provide more details about the issue you're facing with the classes?"
+        },
+        {
+            "role": "user",
+            "content": "The classes are bit hard"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for your feedback, Balaji. Your complaint has been submitted successfully. Is there anything else I can assist you with today?"
+        }
+    ]
+}
