@@ -1,28 +1,48 @@
 from groq import Groq
 import json
+from dotenv import load_dotenv
+load_dotenv()
+import math 
 
 client = Groq()
 MODEL = 'llama3-groq-70b-8192-tool-use-preview'
 
 def calculate(expression):
     """Evaluate a mathematical expression"""
+    print(expression)
     try:
-        result = eval(expression)
+        result = eval(expression, {"math": math})
         return json.dumps({"result": result})
-    except:
-        return json.dumps({"error": "Invalid expression"})
+    except Exception as e:
+        return json.dumps({"error": str(e)})
 
 def run_conversation(user_prompt):
-    messages=[
+    messages = [
         {
             "role": "system",
-            "content": "You are a calculator assistant. Use the calculate function to perform mathematical operations and provide the results."
-        },
+            "content": (
+                "You are a versatile calculator assistant capable of performing a wide range of mathematical operations. "
+                "You can handle basic arithmetic, exponentiation, modulus, and other advanced mathematical functions. "
+                "Use the calculate function to evaluate the given expressions and provide accurate results. "
+                "Here are some examples of operations you can perform:\n"
+                "- Addition: 5 + 3\n"
+                "- Subtraction: 10 - 2\n"
+                "- Multiplication: 4 * 7\n"
+                "- Division: 20 / 4\n"
+                "- Exponentiation: 2 ** 3\n"
+                "- Modulus: 10 % 3\n"
+                "- Complex expressions: (5 + 3) * 2 - 4 / 2\n"
+                "- Trigonometric functions: math.sin(math.pi / 2)\n"
+                "- Logarithmic functions: math.log(100, 10)\n"
+                "- Square root: math.sqrt(16)\n"
+                "Provide your mathematical expression for evaluation."
+            )   },
         {
             "role": "user",
             "content": user_prompt,
         }
     ]
+    
     tools = [
         {
             "type": "function",
@@ -42,6 +62,7 @@ def run_conversation(user_prompt):
             },
         }
     ]
+
     response = client.chat.completions.create(
         model=MODEL,
         messages=messages,
@@ -52,31 +73,30 @@ def run_conversation(user_prompt):
 
     response_message = response.choices[0].message
     tool_calls = response_message.tool_calls
+    
     if tool_calls:
-        available_functions = {
-            "calculate": calculate,
-        }
-        messages.append(response_message)
         for tool_call in tool_calls:
-            function_name = tool_call.function.name
-            function_to_call = available_functions[function_name]
-            function_args = json.loads(tool_call.function.arguments)
-            function_response = function_to_call(
-                expression=function_args.get("expression")
-            )
-            messages.append(
-                {
-                    "tool_call_id": tool_call.id,
-                    "role": "tool",
-                    "name": function_name,
-                    "content": function_response,
-                }
-            )
+            function_arguments = json.loads(tool_call.function.arguments)
+            function_response = calculate(function_arguments.get("expression"))
+            messages.append({
+                "tool_call_id": tool_call.id,
+                "role": "tool",
+                "name": tool_call.function.name,
+                "content": function_response,
+            })
+        
         second_response = client.chat.completions.create(
             model=MODEL,
             messages=messages
         )
         return second_response.choices[0].message.content
 
-user_prompt = "Can you calculate? 25 * 4 + 10"
-print(run_conversation(user_prompt))
+    return response_message.content
+
+while True:
+    user_input = input("You: ")
+    if user_input.lower() == "/bye":
+        print("Session ended. Goodbye!")
+        break
+
+    print("Assistant: " + run_conversation(user_input))
