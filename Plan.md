@@ -21,6 +21,8 @@
 
 
 ## Saturday
+Search LLMs: https://colab.research.google.com/drive/1JcTGWoK-kuagE69BTChPrNdIS4ZbPnD3#scrollTo=jV-6Sh9RVtyF
+
 4. **Advanced Document Analysis**
 https://colab.research.google.com/drive/1QYmUCBazB2_URUq1uERCSZizcraNUgbz#scrollTo=y3VpLThwNAYG
 
