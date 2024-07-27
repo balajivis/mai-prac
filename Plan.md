@@ -29,11 +29,10 @@ https://colab.research.google.com/drive/1QYmUCBazB2_URUq1uERCSZizcraNUgbz#scroll
 6. **Adding Memory to LLM**
 
 7. **SQL + Vector DB**
-   - Text to SQL (predictable)
-   - *Install Postgres*
-   - Search in LLMs
-   - Table analysis (Colab and local)
-   - Using CLIP and other HF models for multimodality
+
+Link: https://colab.research.google.com/drive/18ZyyCfpPDnGOQNw0aevpfx-ZjSstwFsi#scrollTo=XEvzlbS7Zi4E
+- Search in LLMs
+
 
 8. **RAG with Augmentation**
 
