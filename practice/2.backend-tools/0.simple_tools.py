@@ -5,7 +5,9 @@ load_dotenv()
 import math 
 
 client = Groq()
-MODEL = 'llama3-groq-70b-8192-tool-use-preview'
+MODEL = 'llama3-groq-70b-8192-tool-use-preview' # no math here.
+
+# LLM output
 
 def calculate(expression):
     """Evaluate a mathematical expression"""
@@ -21,7 +23,7 @@ def run_conversation(user_prompt):
         {
             "role": "system",
             "content": (
-                "You are a versatile calculator assistant capable of performing a wide range of mathematical operations. "
+                "You must use the tool if it is a math problem. You are a versatile calculator assistant capable of performing a wide range of mathematical operations. "
                 "You can handle basic arithmetic, exponentiation, modulus, and other advanced mathematical functions. "
                 "Use the calculate function to evaluate the given expressions and provide accurate results. "
                 "Here are some examples of operations you can perform:\n"
@@ -73,6 +75,8 @@ def run_conversation(user_prompt):
 
     response_message = response.choices[0].message
     tool_calls = response_message.tool_calls
+    
+    print(tool_calls)
     
     if tool_calls:
         for tool_call in tool_calls:

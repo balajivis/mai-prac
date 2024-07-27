@@ -2,91 +2,51 @@
     "default_user": [
         {
             "role": "user",
-            "content": "what can you help me with?"
+            "content": "Schedule a meeting"
         },
         {
             "role": "assistant",
-            "content": "I can assist you with scheduling lab sessions, booking office hour appointments, submitting complaints, and cancelling appointments. How can I assist you today?"
+            "content": "Sure, I can help with that. Could you please provide me with the date and time you'd like to schedule the meeting, along with your name and phone number?"
         },
         {
             "role": "user",
-            "content": "I'm interested in scheduling the lab session for tomorrow. Show me the slots."
+            "content": "I want to do it for tomorrow 3pm."
         },
         {
             "role": "assistant",
-            "content": "Sure, I can help you with that. I just need to know the date you're interested in for the lab session."
+            "content": "To schedule a meeting for tomorrow at 3pm, I'll need your name and phone number. Could you provide those details, please?"
         },
         {
             "role": "user",
-            "content": "tomorrow"
+            "content": "Balaji, 5251521515"
         },
         {
             "role": "assistant",
-            "content": "Great news! There are available lab session slots for tomorrow at 09:00 and 14:00. Which one would you like to book?"
+            "content": "Great news! Your meeting has been successfully scheduled for tomorrow at 3pm. Is there anything else I can assist you with today?"
         },
         {
             "role": "user",
-            "content": "Can you book me the 2pm slot?"
+            "content": "Is there an appointment for 22nd Aug 2025?"
         },
         {
             "role": "assistant",
-            "content": "To book the 2pm slot, I'll need your name and phone number. Could you provide those details?"
+            "content": "Your appointment has been successfully booked for tomorrow at 3pm. Is there anything else you need help with?"
         },
         {
             "role": "user",
-            "content": "Balaji, 1234567890"
+            "content": "Is there an appointment for 22nd Aug 2025?"
         },
         {
             "role": "assistant",
-            "content": "Your lab session has been successfully booked for tomorrow at 14:00. Is there anything else I can assist you with?"
+            "content": "It looks like there are no available slots for the 22nd of August, 2025, and the slot at 3pm is already booked. Would you like to choose a different date or time?"
         },
         {
             "role": "user",
-            "content": "I have changed my mind, Can you cancel my slot at 2pm?"
+            "content": "Book an appointment for Aug 11, 2025"
         },
         {
             "role": "assistant",
-            "content": "It looks like the 2pm slot is already booked for tomorrow. However, there's an available slot at 09:00. Would you like to book that one instead?"
-        },
-        {
-            "role": "user",
-            "content": "Can you cancel the appointment at 2pm?"
-        },
-        {
-            "role": "assistant",
-            "content": "The slot at 14:00 on 2024-07-25 is already booked, but there's an available slot at 09:00. Would you like to book that one instead?"
-        },
-        {
-            "role": "user",
-            "content": "Really, can you check the slots for tomorrow?"
-        },
-        {
-            "role": "assistant",
-            "content": "To cancel the appointment, I'll need your name and phone number. Could you provide those details?"
-        },
-        {
-            "role": "user",
-            "content": "Balaji 123456790"
-        },
-        {
-            "role": "assistant",
-            "content": "<tool_call>\n{\"id\": 0, \"name\": \"cancel_appointment\", \"arguments\": {\"name\": \"Balaji\", \"phone\": \"1234567890\", \"date\": \"2024-07-25\", \"time\": \"14:00\"}}\n</tool_call>"
-        },
-        {
-            "role": "user",
-            "content": "Ok. Did you cancel the appoihntment?"
-        },
-        {
-            "role": "assistant",
-            "content": "The available lab session slots for tomorrow are at 09:00 and 14:00. Would you like to book one of these slots?"
-        },
-        {
-            "role": "user",
-            "content": "hi"
-        },
-        {
-            "role": "assistant",
-            "content": "Your appointment at 14:00 on 2024-07-25 has been successfully cancelled. Is there anything else I can assist you with?"
+            "content": "It looks like there are no available slots for the 22nd of August, 2025, and the slot at 3pm is already booked. Would you like to choose a different date or time?"
         }
     ]
 }

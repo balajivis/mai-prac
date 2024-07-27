@@ -1,6 +1,6 @@
 {
     "default_user": {
-        "session_memory": "Name: Balaji V\nPhone Number: 1234567890\nTasks: Update contact information, check status of recent order, book an appointment for tomorrow",
+        "session_memory": "Name: Balaji V\nPhone Number: 1234567890\nTasks: Cancel tomorrow's appointment at 3 PM",
         "long_term_memory": ""
     }
 }

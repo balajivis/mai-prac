@@ -29,8 +29,11 @@ https://colab.research.google.com/drive/1QYmUCBazB2_URUq1uERCSZizcraNUgbz#scroll
 5. **Needs for Tools in LLMs**
 
 6. **Adding Memory to LLM**
+Agentic framework: https://colab.research.google.com/drive/1ACt6TPg8SdhtXD1xOQNpIWS4RjrIQKfW
+Get the keys from: https://serper.dev/dashboard
 
 7. **SQL + Vector DB**
+
 
 Link: https://colab.research.google.com/drive/18ZyyCfpPDnGOQNw0aevpfx-ZjSstwFsi#scrollTo=XEvzlbS7Zi4E
 - Search in LLMs

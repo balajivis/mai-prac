@@ -7,6 +7,7 @@ def load_memory(user_id):
     if os.path.exists(MEMORY_FILE):
         with open(MEMORY_FILE, 'r') as f:
             memory = json.load(f)
+            #return 5 if you need
             return memory.get(user_id, [])
     return []
 

@@ -39,6 +39,7 @@ def generate_initial_schedule():
     return schedule
 
 def save_schedule(schedule):
+    # Call Google api
     with open('schedule.json', 'w') as f:
         json.dump(schedule, f, indent=4)
 
@@ -49,7 +50,7 @@ def view_slots(date):
 
 def book_appointment(date, time, name, phone):
     schedule = create_or_load_schedule()
-    if schedule.get(date, {}).get(time) is not None:
+    if schedule.get(date, {}).get(time) is not None: # Check if the date is present
         return json.dumps({"error": f"Sorry, the slot at {time} on {date} is already booked!"})
     schedule.setdefault(date, {})[time] = {'name': name, 'phone': phone}
     save_schedule(schedule)
