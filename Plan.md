@@ -19,16 +19,14 @@
    - Use a basic frontend first
    - Upgrade the frontend
 
-4. **Needs for Tools in LLMs**
-
-5. **Adding Memory to LLM**
 
 ## Saturday
+4. **Advanced Document Analysis**
+https://colab.research.google.com/drive/1QYmUCBazB2_URUq1uERCSZizcraNUgbz#scrollTo=y3VpLThwNAYG
 
-6. **Smarter Memory**
-Sciphi/Triplex
-R2R
-Neo4j
+5. **Needs for Tools in LLMs**
+
+6. **Adding Memory to LLM**
 
 7. **SQL + Vector DB**
    - Text to SQL (predictable)
