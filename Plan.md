@@ -49,6 +49,8 @@ https://colab.research.google.com/drive/1KuGHBs7YkE4XAym_bjU8MmLFpD1Jk29B?usp=sh
 
 12. **Real world architecture and caste study**
    - Routing and guardrails in LLMs
+   - Eval: https://colab.research.google.com/drive/1ohdsyb2athEkRawI2HF-6kBxhdFF8HTk#scrollTo=bm7kRykplte9
+   - 
 13. **RAG with Augmentation**
 
 14. **Evaluations and Governance**
@@ -56,5 +58,6 @@ https://colab.research.google.com/drive/1KuGHBs7YkE4XAym_bjU8MmLFpD1Jk29B?usp=sh
 15. [Summarize large documents](https://colab.research.google.com/drive/1c69CkJzFiT9TPGblqIO9ugndzd3nH-Ar?usp=sharing)
 
 16. **Training LLM from Scratch**
+https://colab.research.google.com/drive/10_sJfSjnbzIMHWCcYfWa1hqIrNUOnWB4#scrollTo=02BUqJcZlowU
 
 17. **Finetuning Theory**

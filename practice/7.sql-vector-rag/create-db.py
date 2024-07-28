@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 load_dotenv()
 import os
 
+print(os.environ.get('DATABASE'))
 # Define connection parameters
 conn_params = {
     'dbname': os.environ.get('DATABASE') ,
