@@ -50,4 +50,4 @@ demo = gr.ChatInterface(
 )
 
 # Launch the Gradio interface
-demo.launch(share=True, debug=True)
+demo.launch(share=False, debug=True)

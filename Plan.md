@@ -21,48 +21,36 @@
 
 
 ## Saturday
-Search LLMs: https://colab.research.google.com/drive/1JcTGWoK-kuagE69BTChPrNdIS4ZbPnD3#scrollTo=jV-6Sh9RVtyF
-
-4. **Advanced Document Analysis**
-https://colab.research.google.com/drive/1QYmUCBazB2_URUq1uERCSZizcraNUgbz#scrollTo=y3VpLThwNAYG
+4. **Search LLMs**: 
+https://colab.research.google.com/drive/1JcTGWoK-kuagE69BTChPrNdIS4ZbPnD3#scrollTo=jV-6Sh9RVtyF
 
 5. **Needs for Tools in LLMs**
 
 6. **Adding Memory to LLM**
-Agentic framework: https://colab.research.google.com/drive/1ACt6TPg8SdhtXD1xOQNpIWS4RjrIQKfW
-Get the keys from: https://serper.dev/dashboard
 
-7. **SQL + Vector DB**
+7. **Advanced Document Analysis**
+https://colab.research.google.com/drive/1QYmUCBazB2_URUq1uERCSZizcraNUgbz#scrollTo=y3VpLThwNAYG
 
-
-Link: https://colab.research.google.com/drive/18ZyyCfpPDnGOQNw0aevpfx-ZjSstwFsi#scrollTo=XEvzlbS7Zi4E
-- Search in LLMs
-
-
-8. **RAG with Augmentation**
+8. **Agentic framework**: https://colab.research.google.com/drive/1ACt6TPg8SdhtXD1xOQNpIWS4RjrIQKfW
+   Get the keys from: https://serper.dev/dashboard
 
 9. **LLM Theory**
 
 ## Sunday
 
-10. **Evaluations and Governance**
-    - Routing and guardrails in LLMs
-    - Architecture
-    - Agent workflows
-    - Search Agents, Autogen Agents
-    - [Summarize large documents](https://colab.research.google.com/drive/1c69CkJzFiT9TPGblqIO9ugndzd3nH-Ar?usp=sharing)
+10. **SQL + Vector DB**
+https://colab.research.google.com/drive/18ZyyCfpPDnGOQNw0aevpfx-ZjSstwFsi#scrollTo=XEvzlbS7Zi4E
 
-11. **Training LLM from Scratch**
+11. **Knowledge graphs**
 
-12. **Finetuning**
+12. **Real world architecture and caste study**
+   - Routing and guardrails in LLMs
+13. **RAG with Augmentation**
 
-13. **Finetuning Theory**
+14. **Evaluations and Governance**
+    
+15. [Summarize large documents](https://colab.research.google.com/drive/1c69CkJzFiT9TPGblqIO9ugndzd3nH-Ar?usp=sharing)
 
-*Python 3.11* (Use Conda to downgrade from 3.12)
-*Postgres 16*
-*RAM*: 16GB (Intel-Windows) / MacBook Pro
-*Disc*: 30GB
-*Groq Cloud*
+16. **Training LLM from Scratch**
 
-**Very comfortable with commandline** [Path setting etc...]
-export PATH="/Library/PostgreSQL/16/bin/:$PATH"
+17. **Finetuning Theory**
