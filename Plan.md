@@ -41,7 +41,11 @@ https://colab.research.google.com/drive/1QYmUCBazB2_URUq1uERCSZizcraNUgbz#scroll
 10. **SQL + Vector DB**
 https://colab.research.google.com/drive/18ZyyCfpPDnGOQNw0aevpfx-ZjSstwFsi#scrollTo=XEvzlbS7Zi4E
 
++ 7. sql-vector
+
 11. **Knowledge graphs**
+Ne04j Aura
+https://colab.research.google.com/drive/1KuGHBs7YkE4XAym_bjU8MmLFpD1Jk29B?usp=sharing
 
 12. **Real world architecture and caste study**
    - Routing and guardrails in LLMs
