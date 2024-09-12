@@ -50,7 +50,9 @@ https://colab.research.google.com/drive/1KuGHBs7YkE4XAym_bjU8MmLFpD1Jk29B?usp=sh
 12. **Real world architecture and caste study**
    - Routing and guardrails in LLMs
    https://colab.research.google.com/drive/1VEDf_qGIrUsWuHxks04s5VtESzbLWohj#scrollTo=47jMbcv0btGs
-   
+
+   - Helper functions for LLMs: https://colab.research.google.com/drive/1bRZYvajrSV_k1AgH_Je1O4TWfpNvRU0P#scrollTo=N7dTEUR6Nf0W
+
    - Eval: https://colab.research.google.com/drive/1ohdsyb2athEkRawI2HF-6kBxhdFF8HTk#scrollTo=bm7kRykplte9
    - 
 13. **RAG with Augmentation**
