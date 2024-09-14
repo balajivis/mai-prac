@@ -1,11 +1,14 @@
 import re
-from langchain_groq import ChatGroq
 from dotenv import load_dotenv
 load_dotenv()
-#llm = ChatGroq(model_name="llama3-70b-8192")
+
+from langchain_groq import ChatGroq
+llm_groq = ChatGroq(model_name="llama3-70b-8192")
 
 from langchain_community.llms import Ollama
-llm = Ollama(model="gemma:2b") 
+llm = Ollama(model="gemma2:2b") 
+
+llm_picker = "ollama" # or "groq"
 
 def chat():
     print("Welcome to the chat! Type '/bye' to end the session.")
@@ -16,7 +19,11 @@ def chat():
         
     
         if valid_pattern.match(user_input):
-            response = llm.invoke(user_input).content # If you are using Groq
+            
+            if llm_picker == "ollama":
+                response = llm.invoke(user_input) # If you are using Ollama
+            else:
+                response = llm_groq.invoke(user_input).content # If you are using Groq
         else:
             response = "Type something valid, bro."
         

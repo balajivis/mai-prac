@@ -26,7 +26,7 @@ function sendMessage() {
         addMessage('user', message);
         input.value = '';
         
-        fetch('http://localhost:8000/tweet-gemma/invoke', {
+        fetch('http://localhost:8000/customer-service/invoke', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
