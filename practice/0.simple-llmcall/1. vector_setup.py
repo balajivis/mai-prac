@@ -9,7 +9,7 @@ from langchain_community.vectorstores import Chroma
 import gradio as gr
 
 # 2. Parse PDF
-reader = PdfReader('./arso.pdf')
+reader = PdfReader('arso.pdf')
 text = ""
 for i in range(0, len(reader.pages)):
     page = reader.pages[i]
@@ -46,7 +46,7 @@ def language_chat(message, history):
 
 
 demo = gr.ChatInterface(
-    language_chat, title="Vector DB search", theme='Taithrah/Minimal')
+    language_chat, title="Vector DB search")
 
 if __name__ == "__main__":
     demo.launch()

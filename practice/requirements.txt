@@ -46,8 +46,8 @@ gitdb==4.0.11
 GitPython==3.1.43
 google-auth==2.32.0
 googleapis-common-protos==1.63.2
-gradio==3.48.0
-gradio_client==0.6.1
+gradio==4.29.0
+gradio_client==0.16.1
 graphene==3.3
 graphql-core==3.2.3
 graphql-relay==3.2.0
@@ -78,7 +78,6 @@ langchain-core==0.2.40
 langchain-experimental==0.0.37
 langchain-groq==0.1.9
 langchain-text-splitters==0.2.4
-langcorn==0.0.22
 langserve==0.2.3
 langsmith==0.1.120
 loguru==0.7.2
